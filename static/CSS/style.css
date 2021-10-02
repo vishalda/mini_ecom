@@ -1,4 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 * {
   padding: 0;
   margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.section {
+  padding: 4rem 2rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  row-gap: 10rem;
+}
+
+.bottom-left-circle {
+  background-color: rgb(156, 221, 43);
+  width: 20rem;
+  height: 30rem;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  position: absolute;
+  top: 80%;
+  left: -10rem;
+}
+
+.header {
+  z-index: 1;
+  background-image: url("http://127.0.0.1:8000/media/images/bg.png");
+  background-size: cover;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 2rem;
+  padding: 10rem;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 968px) {
+  .header {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.header__data {
+  position: relative;
+  width: 40rem;
+  line-height: 1.5;
+}
+
+.button {
+  border: 0;
+  padding: 1rem 3rem;
+  background-color: rgb(156, 221, 43);
+  border-radius: 1rem;
+  font-weight: bold;
+}
+
+.header__image-block {
+  position: absolute;
+  right: 20%;
+  top: 20rem;
+}
+
+#header__image {
+  width: 50rem;
+  height: auto;
+  transform: rotateZ(-30deg);
+}
+
+.carousel__container {
+  width: 70%;
+  height: 50%;
+}
+
+#myCarousel {
+  height: 100%;
+}
+
+.carousel__item {
+  width: auto;
+  height: 50rem;
+}
+
+.carousel__item p {
+  position: absolute;
+  top: 70%;
+  left: 90%;
+  font-size: 5em;
+  color: black;
+  font-weight: bold;
+}
+
+.carousel__item button {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+}
+
+.product__section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 15rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 50rem;
 }
