@@ -99,51 +99,30 @@
         </div>
       </section>
       <section class="product__section section">
-        <div class="card" style="width: 18rem">
-          <img class="card-img-top" src="..." alt="Card image cap" />
+        {% for prod in products %}
+        <div class="card" style="width: 20rem; height: 15rem">
+          <img
+            class="card-img-top"
+            src="{{prod.image.url}}"
+            alt="Card image cap"
+            style="width: 100%; height: auto"
+          />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
+            <h5 class="card-title">{{prod.title}}</h5>
+            <p class="card-text">{{prod.description}}</p>
+            <span class="card-text">{{prod.price}}</span>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
-          <img class="card-img-top" src="..." alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img class="card-img-top" src="..." alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img class="card-img-top" src="..." alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+        {% endfor %}
       </section>
+      <section class="parallax__section"><div class="parallax"></div></section>
+      <footer class="footer__section">
+        <button class="button">Contact-us</button>
+        <button onclick="topFunction()" class="button" id="scroll__button">
+          Scroll up
+        </button>
+      </footer>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -151,6 +130,9 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+      function topFunction() {
+        document.documentElement.scrollTop = 0;
+      }
     </script>
   </body>
 </html>
