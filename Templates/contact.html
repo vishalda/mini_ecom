@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/CSS/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contact__block">
+      <div class="navbar" style="position: absolute; top: 0">
+        <span class="nav-logo">LOGO</span>
+        <div class="nav-ele">
+          <a href="/" class="nav-home-ele">Home</a>
+          <a href="/contact-us" class="nav-contact-ele">Contact-Us</a>
+        </div>
+      </div>
+      <section class="contact__section section">
+        <h1 class="contact__header">CONTACT US</h1>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Name :</label>
+            <input class="form-control" type="text" placeholder="Name" />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email :</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message :</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Sign up for our email list for updates, promotions, and
+              more.</label
+            >
+          </div>
+          <button type="submit" class="btn button">Submit</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
