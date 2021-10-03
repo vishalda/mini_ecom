@@ -21,9 +21,15 @@
   </head>
   <body>
     <main class="main">
-      <div class="top-right-circle"></div>
       <div class="bottom-left-circle"></div>
       <section class="header section" id="header" data-aos="fade-in">
+        <div class="navbar">
+          <span class="nav-logo">LOGO</span>
+          <div class="nav-ele">
+            <a href="/" class="nav-home-ele">Home</a>
+            <a href="/contact-us" class="nav-contact-ele">Contact-Us</a>
+          </div>
+        </div>
         <div class="header__data" data-aos="fade-up">
           <h1 class="header__title">
             Order products <br />
@@ -98,9 +104,9 @@
           </a>
         </div>
       </section>
-      <section class="product__section section">
+      <section class="product__section">
         {% for prod in products %}
-        <div class="card" style="width: 20rem; height: 15rem">
+        <div class="card">
           <img
             class="card-img-top"
             src="{{prod.image.url}}"
