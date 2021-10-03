@@ -6,6 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .section {
   padding: 4rem 2rem;
 }
@@ -31,6 +35,18 @@
   z-index: 2;
 }
 
+.top-right-circle {
+  background-color: rgb(174, 238, 65);
+  width: 20rem;
+  height: 25rem;
+  border-bottom-left-radius: 100%;
+  position: absolute;
+  top: -10rem;
+  right: -5rem;
+  z-index: 2;
+  overflow-x: hidden;
+}
+
 .button {
   border: 0;
   padding: 1rem 3rem;
@@ -38,6 +54,7 @@
   border-radius: 1rem;
   font-weight: bold;
   margin-top: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 .header {
@@ -50,7 +67,7 @@
   padding: 10rem;
   position: relative;
   margin-top: 8rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 3px 84px -30px rgba(0, 0, 0, 0.37);
 }
 
 .header__title,
@@ -133,6 +150,9 @@
     border-radius: 0;
     box-shadow: none;
     margin-top: 0;
+  }
+  .top-right-circle {
+    display: none;
   }
 }
 
@@ -244,20 +264,60 @@
 }
 
 .card {
-  width: 25rem;
+  width: 30rem;
   height: auto;
   margin: 5%;
-  border: 1px solid black;
   border-radius: 2rem;
+  box-shadow: 10px 10px 95px -34px rgba(0, 0, 0, 0.28);
+  transition: 0.4s;
+  line-height: 2;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(174, 238, 65),
+    rgb(28, 163, 28)
+  );
 }
 
 .card-img-top {
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
+  transition: 0.4s;
 }
 
 .card-body {
   padding: 2rem;
+  background-color: white;
+  transition: 0.4s;
+  height: 100%;
+}
+
+.card__hover-div {
+  transition: 0.4s;
+  display: none;
+  text-align: center;
+}
+
+.card:hover {
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.card:hover .card__hover-div {
+  display: block;
+}
+
+.card:hover .card-img-top {
+  transition-delay: 0.4s;
+  display: none;
+}
+
+.card:hover .card-body {
+  display: none;
 }
 
 @media screen and (max-width: 1400px) {
@@ -334,7 +394,6 @@
   background: rgba(255, 255, 255, 0.45);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }

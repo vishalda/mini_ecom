@@ -22,6 +22,7 @@
   <body>
     <main class="main">
       <div class="bottom-left-circle"></div>
+      <div class="top-right-circle"></div>
       <section class="header section" id="header" data-aos="fade-in">
         <div class="navbar">
           <span class="nav-logo">LOGO</span>
@@ -116,8 +117,11 @@
           <div class="card-body">
             <h5 class="card-title">{{prod.title}}</h5>
             <p class="card-text">{{prod.description}}</p>
-            <span class="card-text">{{prod.price}}</span>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <span class="card-text">{{prod.price}}</span><br />
+          </div>
+          <div class="card__hover-div">
+            <p>{{prod.offer}}% offer</p>
+            <span href="#" class="btn button">Buy this</span>
           </div>
         </div>
         {% endfor %}
