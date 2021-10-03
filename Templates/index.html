@@ -20,10 +20,15 @@
     <title>Document</title>
   </head>
   <body>
-    <main class="main">
+    <main class="main" id="main">
       <div class="bottom-left-circle"></div>
       <div class="top-right-circle"></div>
-      <section class="header section" id="header" data-aos="fade-in">
+      <section
+        class="header section"
+        id="header"
+        data-aos="fade-in"
+        data-aos-duration="1000"
+      >
         <div class="navbar">
           <span class="nav-logo">LOGO</span>
           <div class="nav-ele">
@@ -31,7 +36,7 @@
             <a href="/contact-us" class="nav-contact-ele">Contact-Us</a>
           </div>
         </div>
-        <div class="header__data" data-aos="fade-up">
+        <div class="header__data" data-aos="fade-up" data-aos-delay="500">
           <h1 class="header__title">
             Order products <br />
             faster, easier
@@ -46,7 +51,7 @@
           </p>
           <button id="header__button" class="button">Buy now</button>
         </div>
-        <div class="header__image-block" data-aos="fade-up">
+        <div class="header__image-block" data-aos="fade-up" data-aos-delay="50">
           <img
             src="http://127.0.0.1:8000/media/images/nike.png"
             alt=""
@@ -56,38 +61,54 @@
       </section>
       <section class="carousel__container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
           </ol>
-
-          <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active carousel__item">
               <img
                 src="http://127.0.0.1:8000/media/images/carousel-1.jpg"
                 alt=""
               />
-              <p>01</p>
-              <button class="button">Buy this</button>
+
+              <div>
+                <h1>01</h1>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  id fermentum sem. Proin dapibus ut est eu elementum.</span
+                >
+                <button class="button">Buy this</button>
+              </div>
             </div>
             <div class="item carousel__item">
               <img
                 src="http://127.0.0.1:8000/media/images/carousel-2.jpg"
                 alt=""
               />
-              <p>02</p>
-              <button class="button">Explore</button>
+              <div>
+                <h1>02</h1>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  id fermentum sem. Proin dapibus ut est eu elementum.</span
+                >
+                <button class="button">Explore</button>
+              </div>
             </div>
             <div class="item carousel__item">
               <img
                 src="http://127.0.0.1:8000/media/images/carousel-3.jpg"
                 alt=""
               />
-              <p>03</p>
-              <button class="button">Buy this</button>
+              <div>
+                <h1>03</h1>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  id fermentum sem. Proin dapibus ut est eu elementum.</span
+                >
+                <button class="button">Buy this</button>
+              </div>
             </div>
           </div>
           <!-- Left and right controls -->
@@ -107,7 +128,7 @@
       </section>
       <section class="product__section">
         {% for prod in products %}
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img
             class="card-img-top"
             src="{{prod.image.url}}"
@@ -117,7 +138,7 @@
           <div class="card-body">
             <h5 class="card-title">{{prod.title}}</h5>
             <p class="card-text">{{prod.description}}</p>
-            <span class="card-text">{{prod.price}}</span><br />
+            <span class="card-text">Rs. {{prod.price}}</span><br />
           </div>
           <div class="card__hover-div">
             <p>{{prod.offer}}% offer</p>
@@ -134,8 +155,6 @@
         </button>
       </footer>
     </main>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
